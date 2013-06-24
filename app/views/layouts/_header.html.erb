@@ -25,11 +25,15 @@
       
 </ul>
 
-<ul class="nav pull-right">   
+<ul class="nav pull-right">
+<% if user_signed_in? %> 
 
-            <li>  
-            	<%=link_to "Login", '#'%> 
+ <li>  <%= link_to "logout", destroy_user_session_path, method: :delete %> 
             </li>
+
+  <% else %>
+  	<li><% link_to "login", new_user_session_path %> </li>
+<% end %>
             
       </div>
 
