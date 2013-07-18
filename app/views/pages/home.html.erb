@@ -1,40 +1,15 @@
-<div class="hero unit">
-  <h1>
-    Welcome To Michael's Webpage!
-</h1>
+<div class="hero-unit">
+  <h1>Welcome to One Month Rails!</h1>
+  <p>
+    You've found the home page for the 
+    <%= link_to "One Month Rails", "http://onemonthrails.com" %> application.
+</p>
+<p>
 
-
-<div class="navbar">
-  <div class="navbar-inner">
-    <div class="container">
-      <ul class="nav">
-        <a class="brand" href="#">Project name</a>
-
-       
-      
-
-
-      <ul class="nav pull-right">   
-        <li>
-          <div id="user_nav">
-            <% if user_signed_in? %>
-            Signed in as <%= current_user.email %>. Not you?
-            <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => 'btn btn-danger btn-mini' %>
-            <% else %>
-            <%= link_to new_user_registration_path do %>
-            <button class="btn-mini btn btn-info">Sign Up</button>
-            <% end %>
-            or <%= link_to new_user_session_path do %>
-            <button class="btn btn-info btn-mini">Sign In</button>
-            <% end %>
-            <% end %>
-          </div>
-        </li> 
-      </ul>
-
-    </div>
-  </div>
+    <%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
+</p>
 </div>
+  
 
 
 
@@ -47,4 +22,4 @@
 
 
 
-</div>
+
